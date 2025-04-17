@@ -1,1 +1,32 @@
-$
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>que3</title>
+</head>
+<body>
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+    <li>Cherry</li>
+</ul>
+<script>
+    const list=document.querySelectorAll('ul li');
+    console.log(list);
+
+    list.forEach((item,index)=>{
+        console.log(`item ${index+1}:`,item.textContent);
+    });
+
+    list.forEach((item,index)=>{
+        if((index+1)%2==0){
+            item.classList.add('highlight');
+            console.log(`class added to ${index+1}`);
+        }
+    });
+
+    console.log('Total list item:',list.length);
+</script>
+</body>
+</html>
