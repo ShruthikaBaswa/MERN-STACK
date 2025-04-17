@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>que5</title>
+</head>
+<body>
+    <script>
+        function evaluateConditions(obj){
+        if(obj.age >= 18 && obj.hasLicense ==true){
+            return "Eligible to drive";
+        }
+        if(obj.temperature>30 || obj.humidity > 70){
+            return "Warning: High discomfort level";
+        }
+        if((obj.role =="admin"||obj.role =="editor") && obj.isActive == true){
+            return "Access granted";
+        }
+        if(!obj.isVerified && obj.loginAttempts>3){
+            return "Account Locked";
+        }
+        if ((obj.totalPurchases > 1000 || obj.loyaltyLevel === "gold") && obj.isSubscribed) {
+            return "VIP customer";
+        }
+        if (obj.mileage > 20000 && !obj.recentlyServiced) {
+            return "Maintenance required";
+        }
+        if (obj.isBanned || !obj.isActive) {
+            return "Access denied";
+        }
+        return "No conditions Statisfied";
+    }
+    console.log(evaluateConditions({
+        age:10,
+        hasLicense:true,
+        temperature:35,
+        humidity:50,
+        role:'admin',
+        isActive: false,
+        isVerified: true,
+        loginAttempts:3,
+        totalPurchases:2000,
+        loyaltyLevel: 'gold',
+        isSubscribed: true,
+        mileage:30000,
+        recentlyServiced:false,
+        isBanned:true,
+        isActive:false
+    }));
+    </script>
+    
+</body>
+</html>
