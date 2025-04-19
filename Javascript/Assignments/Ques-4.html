@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>que4</title>
+</head>
+<body>
+    <script>
+
+        //GLOBAL VARIABLE
+        var globalVar = "I'm a global variable";
+        function showGlobal() {
+            console.log(globalVar); 
+        }
+        showGlobal();
+        console.log(globalVar);
+
+        //LOCAL VARIABLE
+        function localScopeExample() {
+            let localVar = "I'm local";
+            console.log(localVar); 
+        }
+        localScopeExample();
+
+        //BLOCK SCOPE with let and const
+        {
+            let blockVar = "I'm block scoped";
+            const constBlockVar = "So am I";
+            console.log(blockVar);      
+            console.log(constBlockVar);  
+        }
+
+        //VARIABLE SHADOWING
+        let message = "Hello, world!";
+        function greet() {
+            let message = "Hi there"; 
+            console.log(message);    
+        }
+        greet();
+        console.log(message);       
+
+    </script>
+</body>
+</html>
